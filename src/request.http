@@ -1,0 +1,43 @@
+### sign in
+POST http://localhost:3005/user
+content-type: application/json
+
+{
+  "username": "Mbouna",
+  "password": "admin"
+}
+
+###Sign in
+POST http://localhost:3005/signin
+content-type: application/json
+
+{
+  "username": "Mbouna1",
+  "password": "admin"
+}
+
+### Create  product
+POST http://localhost:3005/api/product
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDY1NTg5NH0.Z_FXQA4Z9CK9--cB0J8BCRga82CMQ8XMqaIqkB1ZVUI
+content-type: application/json
+
+{
+  "name": "Iphone 14 Pro Max+"
+}
+
+### Get One product
+GET http://localhost:3005/api/product/b4c98087-0c0b-40a8-b16f-c0f9f9730c32
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+
+### Delete product
+DELETE http://localhost:3005/api/product/b4c98087-0c0b-40a8-b16f-c0f9f9730c32
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+
+
+### Edit product
+PUT http://localhost:3005/api/product/223
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+
+
+GET http://localhost:3005/api/product
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYThlY2U0LTRiOGUtNDQ4YS1hYThmLTc5MWU2MWI4YTYzNiIsInVzZXJuYW1lIjoiTWJvdW5hIiwiaWF0IjoxNjc0NDgxNDA5fQ.RnUWEUsktffp3PekibSI8Ck5xVdqBitlFqma3-Snl9g
