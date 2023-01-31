@@ -1,3 +1,10 @@
+import {
+  getUpdates,
+  updateUpdate,
+  createUpdate,
+  deleteUpdate,
+  getOneUpdate,
+} from "./handlers/update";
 import { Router } from "express";
 import { body, oneOf, validationResult } from "express-validator";
 import { handlerInputErrors } from "./modules/middleware";
@@ -34,24 +41,24 @@ router.delete("/product/:id", deleteProduct);
 /**
  * Update
  */
-router.get("/update", () => {});
-router.get("/update/:id", () => {});
+router.get("/update", getUpdates);
+router.get("/update/:id", getOneUpdate);
 router.put(
   "/update/:id",
   body("title").optional(),
   body("body").optional(),
   body("status").isIn(["IN_PROGRESS", "SHIPPED", "DEPRECATED"]).optional(),
   body("version").optional(),
-  () => {}
+  updateUpdate
 );
 router.post(
   "/update",
   body("title").exists().isString(),
   body("body").exists().isString(),
   body("productId").exists().isString(),
-  () => {}
+  createUpdate
 );
-router.delete("/update/:id", () => {});
+router.delete("/update/:id", deleteUpdate);
 
 /**
  * UpdatePoint

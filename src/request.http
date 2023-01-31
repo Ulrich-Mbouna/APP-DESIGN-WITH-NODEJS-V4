@@ -22,7 +22,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1L
 content-type: application/json
 
 {
-  "name": "Iphone 14 Pro Max+"
+  "name": "Redmi note 11 pro plus 5G"
 }
 
 ### Get One product
@@ -41,3 +41,36 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1L
 
 GET http://localhost:3005/api/product
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYThlY2U0LTRiOGUtNDQ4YS1hYThmLTc5MWU2MWI4YTYzNiIsInVzZXJuYW1lIjoiTWJvdW5hIiwiaWF0IjoxNjc0NDgxNDA5fQ.RnUWEUsktffp3PekibSI8Ck5xVdqBitlFqma3-Snl9g
+
+
+### Create an update
+POST http://localhost:3005/api/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+
+{
+  "title": "New Features who dist ?",
+  "body": "This is the best features yyet",
+  "productId": "ab53d9bd-d421-472e-a262-85f5c152f24c"
+}
+
+### Get an updates
+GET http://localhost:3005/api/update/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+
+### Get one update
+GET http://localhost:3005/api/update/f8feb75f-9d04-4c4b-9e72-c86ce61fe0bf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+
+### Update an update
+PUT http://localhost:3005/api/update/f8feb75f-9d04-4c4b-9e72-c86ce61fe0bf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
+Content-Type: application/json
+
+{
+  "title": "New Title OHHH" 
+}
+
+### Delete an update
+DELETE http://localhost:3005/api/update/f8feb75f-9d04-4c4b-9e72-c86ce61fe0bf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NDczNzY1LTcyOGQtNGVmZS1iNzRlLWE2ZjRkMzE4ZGQ1ZiIsInVzZXJuYW1lIjoiTWJvdW5hMSIsImlhdCI6MTY3NDU1Mjg0MX0.ZJgtBydoEsoMRPTNDFuAb-6BnZ7lJjxR3Rxb_1ifkdY
