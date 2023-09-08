@@ -3,8 +3,10 @@ import merge from 'lodash.merge';
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 const stage = process.env.STAGE = process.env.STAGE || 'local'
 
+console.log({stage})
 let envConfig
 
+console.log({stage})
 if(stage === 'production') {
     envConfig = require('./production').default
 } else if (stage === 'testing') {
@@ -13,7 +15,7 @@ if(stage === 'production') {
     envConfig = require('./local').default
 }
 
-console.log({stage})
+
 
 export default merge({
     stage,

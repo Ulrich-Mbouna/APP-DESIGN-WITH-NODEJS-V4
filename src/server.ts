@@ -20,9 +20,10 @@ app.get('/', (req, res, next) => {
     // res.json({
     //     message: 'Hello Express'
     // })
-    setTimeout(() => {
-        next(new Error('Hello'))
-    }, 1000)
+    // setTimeout(() => {
+    //     next(new Error('Hello'))
+    // }, 1000)
+res.json({message: 'hello'})
 })
 
 app.use('/api',protect, router);
